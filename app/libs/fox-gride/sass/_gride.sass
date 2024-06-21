@@ -1,0 +1,71 @@
+// Я создаю эту систему позицианирования блоков "Schneller Fuchs" для личного пользования. Я создаю
+// ее с целью упростить верстку сайта, уменьшить вес стилевого файла css то есть максимальо исключить
+// повторяющиеся стили  
+// Это 10ти колоночная сетка на подобие сетки "Bootstrap" но гораздо компактней и легче и пользоватся ей будет проще 
+// Родительский контейнер с которого начинается строительство всех блоков
+// 3 контейнера имеют разную ширину, первый контейнер имеете дефолтный размер во всю ширину экрана
+.fox-comtainer
+    width: 100vw
+.fox-comtainer-1440
+    width: 1440px
+.fox-comtainer-1170
+    width: 1170px
+
+.fox-comtainer-1440,
+.fox-comtainer-1170
+    box-sizing: border-box // Размер блока вместе с отступами и бордерами
+    margin-left: auto
+    margin-right: auto
+
+// Оберточный флекс контейнер для формирвания внутренних колонок
+// "row" это строчное расположение блоков и "colum" - колонки
+.fox-row,
+.fox-colum
+    max-width: 100% // размер контейнера 
+    display: flex
+    flex-wrap: wrap // Перенос внутренних блоков на нижний ряд
+    justify-content: center // Центровать блоки
+    align-items: stretch // Растягивать в одинаковую высоту
+
+.fox-colum
+    flex-direction: column
+
+.fox-colum-1
+    width: 10%
+.fox-colum-2
+    width: 20%
+.fox-colum-25
+    width: 25%
+.fox-colum-3
+    width: 30%
+.fox-colum-33
+    width: 33.33333%
+.fox-colum-4
+    width: 40%
+.fox-colum-5
+    width: 50%
+.fox-colum-6
+    width: 60%
+.fox-colum-7
+    width: 70%
+.fox-colum-8
+    width: 80%
+.fox-colum-9
+    width: 90%
+.fox-colum-0
+    width: 100%
+
+.fox-colum-1,
+.fox-colum-2,
+.fox-colum-25,
+.fox-colum-3,
+.fox-colum-33,
+.fox-colum-4,
+.fox-colum-5,
+.fox-colum-6,
+.fox-colum-7,
+.fox-colum-8,
+.fox-colum-9,
+.fox-colum-0
+    box-sizing: border-box
+    padding: $pg
